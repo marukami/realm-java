@@ -4,6 +4,7 @@
 * BREAKING CHANGE: String setters now throw IllegalArgumentException instead of RealmError for invalid surrogates.
 * BREAKING CHANGE: DynamicRealm.distinct()/distinctAsync() and Realm.distinct()/distinctAsync() now throw IllegalArgumentException instead of UnsupportedOperationException for invalid type or unindexed field.
 * BREAKING CHANGE: All thread local change listeners are now delayed until the next Looper event instead of being triggered when committing.
+* BREAKING CHANGE: Realm.migrateRealm() throws a FileNotFoundException if the Realm file doesn't exist.
 * Deprecated methods: Realm.getInstance(Context). Use Realm.getInstance(RealmConfiguration) or Realm.getDefaultInstance() instead.
 * Fixed an error occurring during test and connectedCheck of unit test example (#1934).
 * Fixed bug in jsonExample (#2092).
